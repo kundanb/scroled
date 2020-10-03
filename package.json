@@ -1,0 +1,15 @@
+{
+  "name": "scroled",
+  "version": "1.0.0",
+  "description": "An amazing LED scrolling display made in JavaScript.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kundanb/scroled.git"
+  },
+  "author": "Kundan Bhasin <kundanbhasin11062000@gmail.com> (https://kundanb.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kundanb/scroled/issues"
+  },
+  "homepage": "https://github.com/kundanb/scroled#readme"
+}
