@@ -1,0 +1,29 @@
+@import 'vars';
+
+#app {
+  padding: 16px;
+  background-color: $clr-prim-dark;
+  color: #fff;
+}
+
+#app-body {
+  margin: 16px;
+  flex: 1;
+}
+
+#app-name {
+  max-width: 50%;
+  max-height: 64px;
+}
+
+#app .play-btn-cont {
+  margin-top: 48px;
+}
+
+#app-footer {
+  margin: 16px;
+}
+
+#app-footer .social-links-cont a {
+  margin-right: 16px;
+}

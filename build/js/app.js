@@ -1,0 +1,1 @@
+"use strict";!function(){var e=document.createElement("link");e.href="./css/app.css",e.rel="stylesheet",document.head.appendChild(e)}();var $app=document.getElementById("app"),$appBody=document.getElementById("app-body"),$appFooter=document.getElementById("app-footer"),showApp=function(){$app.show(),$appBody.show(),$appFooter.show()};

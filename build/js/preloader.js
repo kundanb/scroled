@@ -1,1 +1,1 @@
-"use strict";var $preloader=document.getElementById("preloader"),$preloaderBrandCont=document.querySelector("#preloader .brand-cont");window.addEventListener("load",function(){$preloaderBrandCont.hide(function(){$preloader.hide()})});
+"use strict";var $preloader=document.getElementById("preloader"),$preloaderBrandCont=document.querySelector("#preloader .brand-cont"),hidePreloader=function(e){var r=0<arguments.length&&void 0!==e?e:null;$preloaderBrandCont.hide(function(){$preloader.hide(r)})};

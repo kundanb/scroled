@@ -40,6 +40,43 @@ strong {
   overflow: auto;
 }
 
+.brand_icon {
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 10px -6px #0005;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand_icon:hover {
+  transform: translateY(-10%);
+}
+.icon_32 {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+}
+.icon_48 {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+}
+.icon_64 {
+  width: 64px;
+  height: 64px;
+  padding: 16px;
+}
+.icon_80 {
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+}
+.icon_96 {
+  width: 96px;
+  height: 96px;
+  padding: 24px;
+}
+
 .det {
   transition: 0s;
 }
