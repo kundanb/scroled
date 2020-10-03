@@ -27,29 +27,27 @@ canvas.height = cellSize * cellCountY;
 
 const charArrData = {
   /**
-   * 0 |   0 1 2 3 4 5 6 7 8
-   * --+--------------------
+   * 0 |   0 1 2 3 4 5 6 7
+   * --+------------------
    *   |
-   * 0 |   0 1 1 1 1 1 1 1 0
-   * 1 |   1 0 0 0 0 0 0 1 1
-   * 2 |   1 0 0 0 0 0 1 0 1
-   * 3 |   1 0 0 0 0 1 0 0 1
-   * 4 |   1 0 0 0 1 0 0 0 1
-   * 5 |   1 0 0 0 1 0 0 0 1
-   * 6 |   1 0 0 1 0 0 0 0 1
-   * 7 |   1 0 1 0 0 0 0 0 1
-   * 8 |   1 1 0 0 0 0 0 0 1
-   * 9 |   0 1 1 1 1 1 1 1 0
+   * 0 |   0 1 1 1 1 1 0
+   * 1 |   1 0 0 0 0 0 1
+   * 2 |   1 0 0 0 0 1 1
+   * 3 |   1 0 0 0 1 0 1
+   * 4 |   1 0 0 1 0 0 1
+   * 5 |   1 0 0 1 0 0 1
+   * 6 |   1 0 1 0 0 0 1
+   * 7 |   1 1 0 0 0 0 1
+   * 8 |   1 0 0 0 0 0 1
+   * 9 |   0 1 1 1 1 1 0
    */
   0: [
     [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-    [1, 0, 0, 0, 0, 0, 0, 0, 1, 1],
     [1, 0, 0, 0, 0, 0, 0, 1, 0, 1],
     [1, 0, 0, 0, 0, 0, 1, 0, 0, 1],
     [1, 0, 0, 0, 1, 1, 0, 0, 0, 1],
     [1, 0, 0, 1, 0, 0, 0, 0, 0, 1],
     [1, 0, 1, 0, 0, 0, 0, 0, 0, 1],
-    [1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
     [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
   ],
 
@@ -77,6 +75,18 @@ const charArrData = {
   ],
 };
 
+let nullMatrix = [];
+
+for (let i = 0; i < cellCountY; i++) {
+  nullMatrix.push(0);
+}
+
+let gapMatrix = [];
+
+for (let i = 0; i < cellCountX + 1; i++) {
+  gapMatrix.push(nullMatrix);
+}
+
 let textDataArr;
 
 const resetTextArr = () => {
@@ -84,18 +94,10 @@ const resetTextArr = () => {
     .split('')
     .filter(char => char in charArrData);
 
-  textDataArr = [];
-
-  for (let i = 0; i < cellCountX + parseInt(cellCountX / 4); i++) {
-    textDataArr[i] = [];
-
-    for (let j = 0; j < cellCountY; j++) {
-      textDataArr[i][j] = 0;
-    }
-  }
+  textDataArr = [...gapMatrix];
 
   for (let i = 0; i < textStrArr.length; i++) {
-    textDataArr.push(...charArrData[textStrArr[i]]);
+    textDataArr.push(...charArrData[textStrArr[i]], nullMatrix);
   }
 };
 
@@ -117,7 +119,7 @@ for (let i = 0; i < cellCountX; i++) {
 
 let textDataArrOffset = 0;
 let twoPi = Math.PI * 2;
-const dispScrollSpeed = 5;
+const dispScrollSpeed = 10;
 
 const renderDisp = () => {
   context.clearRect(0, 0, canvas.width, canvas.height);
