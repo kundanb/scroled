@@ -1,0 +1,74 @@
+.fw_n {
+  font-weight: $fw-n;
+}
+.fw_b,
+b,
+strong {
+  font-weight: $fw-b;
+}
+
+.pad_v {
+  padding-top: $pad-v;
+  padding-bottom: $pad-v;
+}
+.pad_h {
+  padding-left: $pad-h;
+  padding-right: $pad-h;
+}
+.pad_b {
+  padding: $pad-b;
+}
+
+.pos_r {
+  position: relative;
+}
+.pos_a {
+  position: absolute;
+}
+.pos_f {
+  position: fixed;
+}
+
+.olap {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.scroll {
+  overflow: auto;
+}
+
+.det {
+  transition: 0s;
+}
+.det.hid {
+  transform: scale(0) !important;
+}
+
+.stretch_in.hid {
+  transform: scaleX(0.75) scaleY(0.5);
+}
+.stretch_out.hid {
+  transform: scaleX(1.5) scaleY(1.25);
+}
+
+.zoom_in.hid {
+  transform: scale(1.25);
+}
+.zoom_out.hid {
+  transform: scale(0.75);
+}
+
+.slide_up.hid {
+  transform: translateY(-15%);
+}
+.slide_down.hid {
+  transform: translateY(15%);
+}
+
+.hid:not(.det) {
+  opacity: 0;
+  visibility: hidden;
+}
