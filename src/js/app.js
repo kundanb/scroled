@@ -14,6 +14,7 @@ const $appIntro = document.getElementById('app-intro');
 const $appName = document.getElementById('app-name');
 const $appPlayBtnCont = document.querySelector('#app .play-btn-cont');
 const $appGround = document.getElementById('app-ground');
+const $ground = document.getElementById('ground');
 const $appFooter = document.getElementById('app-footer');
 
 const $playBtn = document.getElementById('play-btn');
@@ -31,6 +32,7 @@ const showGround = () => {
   $appPlayBtnCont.hide(() => {
     $appIntro.hide();
     $appGround.show();
+    $ground.show();
   });
 };
 

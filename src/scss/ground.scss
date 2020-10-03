@@ -1,0 +1,34 @@
+@import 'vars';
+
+#ground .label {
+  font-weight: $fw-b;
+  font-size: 24px;
+}
+
+#ground .text-input-cont {
+  margin-top: 16px;
+}
+
+#ground .text-input-cont input {
+  width: 600px;
+  height: 80px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 20px -12px #0005;
+  color: $clr-sec-dark;
+  font-size: 32px;
+}
+#ground .text-input-cont input:focus {
+  box-shadow: 0 0 0 4px $clr-sec-dark, 0 0 0 6px #fff, 0 0 20px -12px #0005;
+}
+
+#ground .canvas-cont {
+  margin-top: 32px;
+}
+
+#canvas {
+  background-color: $clr-sec-dark;
+  border-radius: 4px;
+  box-shadow: 0 0 20px -12px #0005;
+}
