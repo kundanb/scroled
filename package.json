@@ -2,6 +2,11 @@
   "name": "scroled",
   "version": "1.0.0",
   "description": "An amazing LED scrolling display made in JavaScript.",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "play": "node ./scripts/play.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kundanb/scroled.git"
