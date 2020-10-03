@@ -4,4 +4,6 @@ window.addEventListener('load', () => {
   $playBtn.addEventListener('click', () => {
     showGround(initGround);
   });
+
+  textInputElem.addEventListener('change', resetTextArr);
 });
