@@ -27,13 +27,11 @@ const showApp = () => {
   $appFooter.show();
 };
 
-const showGround = () => {
+const showGround = callback => {
   $appName.hide();
   $appPlayBtnCont.hide(() => {
     $appIntro.hide();
     $appGround.show();
-    $ground.show();
+    $ground.show(callback);
   });
 };
-
-$playBtn.addEventListener('click', showGround);

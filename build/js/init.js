@@ -1,1 +1,1 @@
-"use strict";window.addEventListener("load",function(){hidePreloader(showApp)});
+"use strict";window.addEventListener("load",function(){hidePreloader(showApp),$playBtn.addEventListener("click",function(){showGround(initGround)})});
