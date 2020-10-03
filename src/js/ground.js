@@ -109,8 +109,8 @@ for (let i = 0; i < cellCountX; i++) {
 
   for (let j = 0; j < cellCountY; j++) {
     bulbConfigArr[i][j] = {
-      x: i * cellCountX + cellSizeOver2,
-      y: j * cellCountY + cellSizeOver2,
+      x: i * cellSize + cellSizeOver2,
+      y: j * cellSize + cellSizeOver2,
     };
   }
 }
@@ -122,9 +122,9 @@ const dispScrollSpeed = 5;
 const renderDisp = () => {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
-  for (let i = 0; i < cellCountX; i++) {
-    let charDataArrOffset = textDataArrOffset;
+  let charDataArrOffset = textDataArrOffset;
 
+  for (let i = 0; i < cellCountX; i++) {
     for (let j = 0; j < textDataArr[charDataArrOffset].length; j++) {
       context.fillStyle = textDataArr[charDataArrOffset][j]
         ? bulbOnColor
