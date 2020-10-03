@@ -1,0 +1,10 @@
+@import 'vars';
+
+#preloader {
+  background-color: $clr-prim-dark;
+  z-index: 1001;
+}
+
+#preloader .brand-cont {
+  height: 80px;
+}

@@ -1,0 +1,1 @@
+"use strict";var $preloader=document.getElementById("preloader"),$preloaderBrandCont=document.querySelector("#preloader .brand-cont");window.addEventListener("load",function(){$preloaderBrandCont.hide(function(){$preloader.hide()})});
