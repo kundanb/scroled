@@ -205,7 +205,7 @@ const resetTextArr = () => {
 };
 
 let bulbRadius = cellSize / 4;
-let bulbOffColor = '#f003';
+let bulbOffColor = '#f001';
 let bulbOnColor = '#f00';
 let bulbConfigArr = [];
 
